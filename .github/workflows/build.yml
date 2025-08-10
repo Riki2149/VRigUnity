@@ -50,7 +50,7 @@ jobs:
           checkName: ${{ matrix.data.systemName }} results
           testMode: PlayMode
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         if: ${{ matrix.data.targetPlatform == 'StandaloneLinux64' }}
         with:
           name: Results ${{ matrix.data.systemName }}
@@ -65,7 +65,7 @@ jobs:
           versioning: None
           targetPlatform: ${{ matrix.data.targetPlatform }}
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: VRigUnity-${{ matrix.data.systemName }}
           path: build/${{ matrix.data.targetPlatform }}
